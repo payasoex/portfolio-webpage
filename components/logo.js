@@ -20,6 +20,7 @@ const Logo = () => {
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                     fontFamily="M PLUS Rounded 1c"
                     fontWeight="bold"
+                    letterSpacing={.2}
                     ml={3}
                 >
                     Javier Retamal

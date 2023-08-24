@@ -15,20 +15,21 @@ import {
     Flex
 } from "@chakra-ui/react";
 import {HamburgerIcon} from "@chakra-ui/icons";
+import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({href, path, children}) => {
     const active = path === href;
-    const inactiveColor = useColorModeValue('gray.500', 'whiteAlpha.900');
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900');
     return (
-        <NextLink href={href}>
-            <Link
-                p={2}
-                bg={active ? 'glassTeal': undefined}
-                color={active ? '#202023' : inactiveColor}
-            >
-                {children}
-            </Link>
-        </NextLink>
+        <Link 
+            as={NextLink} 
+            href={href}
+            p={2}
+            bg={active ? 'glassTeal': undefined}
+            color={active ? '#202023' : inactiveColor}
+        >
+            {children}
+        </Link>
     )
 }
 
@@ -60,13 +61,39 @@ const Navbar = props => {
                     mt={{base: 4, md: 0}}
                 >
                     <LinkItem href="/trabajos" path={path}>
-                        Trabajo
+                        Work
                     </LinkItem>
                     <LinkItem href="/Skills" path={path}>
                         Skills
                     </LinkItem>
-
                 </Stack>
+                <Box flex={1} align="right">
+                    <ThemeToggleButton/>
+                    <Box ml={2} display={{base: "inline-block", md:"none"}}>
+                        <Menu>
+                            <MenuButton 
+                                as={IconButton} 
+                                icon={<HamburgerIcon />} 
+                                variant="outline" 
+                                aria-label="Options" 
+                            />
+                            <MenuList>
+                                <Link  as={NextLink} href="/" passHref>
+                                    <MenuItem>About</MenuItem>
+                                </Link>
+                                <Link  as={NextLink} href="/works" passHref>
+                                    <MenuItem>Work</MenuItem>
+                                </Link>
+                                <Link  as={NextLink} href="/skills" passHref>
+                                    <MenuItem>Skills</MenuItem>
+                                </Link>
+                                <Link  as={NextLink} href="https://github.com/payasoex/portfolio-webpage" passHref>
+                                    <MenuItem>Source Code</MenuItem>
+                                </Link>
+                            </MenuList>
+                        </Menu>
+                    </Box>
+                </Box>
             </Container>
         </Box>
     )
