@@ -60,11 +60,14 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{base: 4, md: 0}}
                 >
-                    <LinkItem href="/trabajos" path={path}>
-                        Work
+                    <LinkItem href="/works" path={path}>
+                        Works
                     </LinkItem>
                     <LinkItem href="/Skills" path={path}>
                         Skills
+                    </LinkItem>
+                    <LinkItem href="https://github.com/payasoex/portfolio-webpage" path={path} target="_blank">
+                        Source Code
                     </LinkItem>
                 </Stack>
                 <Box flex={1} align="right">
@@ -82,12 +85,12 @@ const Navbar = props => {
                                     <MenuItem>About</MenuItem>
                                 </Link>
                                 <Link  as={NextLink} href="/works" passHref>
-                                    <MenuItem>Work</MenuItem>
+                                    <MenuItem>Works</MenuItem>
                                 </Link>
                                 <Link  as={NextLink} href="/skills" passHref>
                                     <MenuItem>Skills</MenuItem>
                                 </Link>
-                                <Link  as={NextLink} href="https://github.com/payasoex/portfolio-webpage" passHref>
+                                <Link  as={NextLink} href="https://github.com/payasoex/portfolio-webpage" passHref target="_blank">
                                     <MenuItem>Source Code</MenuItem>
                                 </Link>
                             </MenuList>
