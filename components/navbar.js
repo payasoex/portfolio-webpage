@@ -64,7 +64,7 @@ const Navbar = props => {
                     <LinkItem href="/works" path={path}>
                         Works
                     </LinkItem>
-                    <LinkItem href="/Skills" path={path}>
+                    <LinkItem href="/skills" path={path}>
                         Skills
                     </LinkItem>
                     <LinkItem href="https://github.com/payasoex/portfolio-webpage" path={path} target="_blank">
