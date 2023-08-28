@@ -6,7 +6,6 @@ import Layout from "../components/layout/article";
 
 const Works = () => {
     return(
-        <Layout>
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
                     Works
@@ -24,7 +23,6 @@ const Works = () => {
                     </Section>
                 </SimpleGrid>
             </Container>
-        </Layout>
     )
 }
 
