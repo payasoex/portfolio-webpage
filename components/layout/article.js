@@ -9,22 +9,22 @@ const variants = {
 }
 
 const Layout = ({ children, title }) => (
-    <motion.article
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ duration: 0.5, easings: 'easeInOut' }}
-        style={{position: 'absolute'}}
-    >
-        <>
-            {title && (<Head>
-                <title>{title} | Javier Retamal</title>
-            </Head>)}
-            {children}
-            <GridItemStyle/>
-        </>
-    </motion.article>
+        <motion.article
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.4, easings: 'easeInOut' }}
+            style={{position: 'relative'}}
+        >
+            <>
+                {title && (<Head>
+                    <title>{title} | Javier Retamal</title>
+                </Head>)}
+                {children}
+                <GridItemStyle/>
+            </>
+        </motion.article>
 )
 
 export default Layout
