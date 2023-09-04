@@ -52,7 +52,12 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         Work
                     </Heading>
-                    <Paragraph>Aqui debe ir alguna breve descripcion de mi</Paragraph>
+                    <Paragraph>I'm Javier, a passionate front-end developer with a strong foundation in key technologies such as HTML, CSS, JavaScript, and React. 
+                        My experience includes creating appealing and functional web interfaces, as well as implementing responsive solutions that adapt to various devices and screen resolutions.
+                        In addition to my technical skills, I stand out for my ability to collaborate effectively in multidisciplinary teams. I believe in the importance of working together to efficiently achieve goals and continuously improve.
+                        I'm dedicated to the success of the projects I participate in and am always willing to contribute my expertise and creativity to achieve exceptional results. 
+                        Currently, I am actively seeking job opportunities that allow me to continue learning and growing in a dynamic professional environment.
+                        If you're looking for someone who combines solid technical skills with a collaborative mindset focused on project success, I would be delighted to be part of your team!</Paragraph>
                     <Box align="center" my={4}>
                         <Link as={NextLink} href="/works">
                             <Button 
