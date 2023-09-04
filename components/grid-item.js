@@ -20,8 +20,8 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
         </LinkBox>
     </Box>
 )
-
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
+// modificar props { children, id, title, thumbnail } para cuando se implemente la pagina indifiviual de cada work <LinkOverlay as={NextLink} href={`/works/${id}`}>
+export const WorkGridItem = ({ children, href, title, thumbnail }) => (
     <Box w="100%" align="center">
         <LinkBox cursor="pointer">
             <Image
@@ -30,7 +30,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
                 className="grid-item-thumbnail"
                 placeholder="blur"
             />
-            <LinkOverlay as={NextLink} href={`/works/${id}`}>
+            <LinkOverlay as={NextLink} href={href} target='_blank'>
                 <Text mt={2} fontSize={20}>
                     {title}
                 </Text>
