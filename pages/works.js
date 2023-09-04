@@ -14,7 +14,8 @@ const Works = () => {
     {/* en caso de aumentar el numero de proyectos modificar el numero de columnas */}
                     <SimpleGrid columns={[1, 1, 1]} gap={6}>
                         <Section>
-                            <WorkGridItem id="TheOutworld" title="The Outworld" thumbnail={thumbTheOutworld}>
+                            {/* pagina web hardcodeada, modificar en le futuro */}
+                            <WorkGridItem id="TheOutworld" title="The Outworld" thumbnail={thumbTheOutworld} href="https://www.theoutworld.com/">
                             A Web App where we inspire families to connect, explore, and grow together 
                             through fun and engaging outdoor/indoor
                             activities. Whether you're a local or a visitor,
